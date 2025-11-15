@@ -1,98 +1,82 @@
 {
-    "name": "Roy Sheppard",
-    "profilePictureUrl": "images/pictures/avatar.jpg",
+  "name": "Basilio Abaquita",
+  "profilePictureUrl": "images/pictures/avatar.jpg",
 
-    "locales": {
-        "en": {
-            "credits": "Designed by <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "UX Designer"
-        },
-
-        "es": {
-            "credits": "Hecho por <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer de UX"
-        },
-
-        "fr": {
-            "credits": "Conçu par <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer UX"
-        },
-
-        "zh": {
-            "name": "罗伊谢帕德",
-            "credits": "设计：<strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "用户体验设计师"
-        }
+  "locales": {
+    "en": {
+      "credits": "Designed by <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+      "role": "Web Developer"
     },
 
-    "contactOptions": [
-        {
-            "id": "address",
-            "faIcon": "fa-regular fa-map",
-            "href": null,
-            "locales": {
-                "en": {
-                    "value": "123 Main Street, Cupertino, CA 01234",
-                    "valueShort": "Cupertino – CA"
-                },
-                "es": {
-                    "valueShort": "California – EE.UU."
-                },
-                "fr": {
-                    "valueShort": "Californie – États-Unis"
-                },
-                "zh": {
-                    "valueShort": "美国加州"
-                }
-            }
-        },
+    "es": {
+      "credits": "Hecho por <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+      "role": "Designer de UX"
+    },
 
-        {
-            "id": "email",
-            "value": "roy.sheppard@genius.com",
-            "valueShort": "roy.sheppard@genius.com",
-            "faIcon": "fa-regular fa-envelope",
-            "href": "mailto:roy.sheppard@genius.com"
-        },
+    "fr": {
+      "credits": "Conçu par <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+      "role": "Designer UX"
+    },
 
-        {
-            "id": "facebook",
-            "value": "Roy Sheppard",
-            "valueShort": "Roy S.",
-            "faIcon": "fa-brands fa-facebook",
-            "href": "https://facebook.com"
-        },
+    "zh": {
+      "name": "罗伊谢帕德",
+      "credits": "设计：<strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+      "role": "用户体验设计师"
+    }
+  },
 
-        {
-            "id": "github",
-            "value": "@roy.sheppard.official",
-            "valueShort": "@roy.sheppard.official",
-            "faIcon": "fa-brands fa-github",
-            "href": "https://github.com"
+  "contactOptions": [
+    {
+      "id": "address",
+      "faIcon": "fa-regular fa-map",
+      "href": null,
+      "locales": {
+        "en": {
+          "value": "Cebu City, Philippines",
+          "valueShort": "Philippines, Cebu City"
         },
-
-        {
-            "id": "instagram",
-            "value": "@roy.sheppard.official",
-            "valueShort": "@roy.sheppard.official",
-            "faIcon": "fa-brands fa-instagram",
-            "href": "https://instagram.com"
+        "es": {
+          "valueShort": "California – EE.UU."
         },
-
-        {
-            "id": "linkedin",
-            "value": "@roy.sheppard.official",
-            "valueShort": "@roy.sheppard.official",
-            "faIcon": "fa-brands fa-linkedin",
-            "href": "https://linkedin.com"
+        "fr": {
+          "valueShort": "Californie – États-Unis"
         },
-
-        {
-            "id": "phone",
-            "value": "+1 (123) 456-7890",
-            "valueShort": "(123) 456-7890",
-            "faIcon": "fa-brands fa-whatsapp",
-            "href": "tel:1234567890"
+        "zh": {
+          "valueShort": "美国加州"
         }
-    ]
+      }
+    },
+
+    {
+      "id": "email",
+      "value": "basil.softdev@gmail.com",
+      "valueShort": "basil.softdev@gmail.com",
+      "faIcon": "fa-regular fa-envelope",
+      "href": "mailto:basil.softdev@gmail.com"
+    },
+
+    {
+      "id": "github",
+      "value": "@basil.official",
+      "valueShort": "@basil.official",
+      "faIcon": "fa-brands fa-github",
+      "href": "https://github.com/bas19"
+    },
+
+    {
+      "id": "linkedin",
+      "value": "@basil.official",
+      "valueShort": "@basil.official",
+      "faIcon": "fa-brands fa-linkedin",
+      "href": "https://www.linkedin.com/in/basilio-abaquita/"
+    },
+
+    {
+      "id": "phone",
+      "value": "+1 +63 993 037 1628",
+      "valueShort": "+63 993 037 1628",
+      "faIcon": "fa-brands fa-whatsapp",
+      "href": "tel:+63 993 037 1628"
+    }
+  ]
 }
