@@ -1,31 +1,38 @@
 <template>
-    <nav class="nav-mobile-header"
-         id="nav-mobile-header">
-        <NavProfileCard :avatar="profile.profilePictureUrl"
-                        :name="localize(profile.locales, 'name', true) || profile.name"
-                        :role="localize(profile.locales, 'role')"
-                        :shrink="false"
-                        :include-toggle-button="false"
-                        @toggle="null"/>
+    <nav class="nav-mobile-header" id="nav-mobile-header">
+        <NavProfileCard
+            :avatar="profile.profilePictureUrl"
+            :name="localize(profile.locales, 'name', true) || profile.name"
+            :role="localize(profile.locales, 'role')"
+            :shrink="false"
+            :include-toggle-button="false"
+            @toggle="null"
+        />
 
-        <LanguagePicker :shrink="true"
-                        :class="utils.isChromeOS() ? `language-picker-left` : `language-picker-right`"/>
+        <LanguagePicker
+            :shrink="true"
+            :class="
+                utils.isChromeOS()
+                    ? `language-picker-left`
+                    : `language-picker-right`
+            "
+        />
     </nav>
 </template>
 
 <script setup>
-import {inject} from "vue"
-import NavProfileCard from "/src/vue/components/navigation/layout/NavProfileCard.vue"
-import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue"
-import {useUtils} from "/src/composables/utils.js"
+import { inject } from "vue";
+import NavProfileCard from "/src/vue/components/navigation/layout/NavProfileCard.vue";
+import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue";
+import { useUtils } from "/src/composables/utils.js";
 
-const utils = useUtils()
+const utils = useUtils();
 
 /** @type {{value: Profile}} */
-const profile = inject("profile")
+const profile = inject("profile");
 
 /** @type {Function} */
-const localize = inject("localize")
+const localize = inject("localize");
 </script>
 
 <style lang="scss" scoped>
