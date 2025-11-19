@@ -1,53 +1,61 @@
 <template>
-    <section :id="model.htmlId"
-             v-show="visible"
-             class="resume-section"
-             :class="{
-                'resume-section-svh': utils.isIOS(),
-                'resume-section-with-divider': presentationMode === constants.PresentationModes.ALL_AT_ONCE,
-                'resume-section-cover': !model.isDefault
-             }">
+    <section
+        :id="model.htmlId"
+        v-show="visible"
+        class="resume-section"
+        :class="{
+            'resume-section-svh': utils.isIOS(),
+            'resume-section-with-divider':
+                presentationMode === constants.PresentationModes.ALL_AT_ONCE,
+            'resume-section-cover': !model.isDefault,
+        }"
+    >
         <div class="resume-section-content">
-            <SectionHeader v-if="model.isDefault || isMobileLayout"
-                           :model="model"/>
+            <SectionHeader
+                v-if="model.isDefault || isMobileLayout"
+                :model="model"
+            />
 
-            <SectionBody :model="model"/>
+            <SectionBody :model="model" />
         </div>
     </section>
 </template>
 
 <script setup>
-import Section from "/src/models/Section.js"
-import {computed, inject} from "vue"
-import {useConstants} from "/src/composables/constants.js"
-import SectionHeader from "/src/vue/components/sections/SectionHeader.vue"
-import SectionBody from "/src/vue/components/sections/SectionBody.vue"
-import {useUtils} from "/src/composables/utils.js"
+import Section from "/src/models/Section.js";
+import { computed, inject } from "vue";
+import { useConstants } from "/src/composables/constants.js";
+import SectionHeader from "/src/vue/components/sections/SectionHeader.vue";
+import SectionBody from "/src/vue/components/sections/SectionBody.vue";
+import { useUtils } from "/src/composables/utils.js";
 
-const constants = useConstants()
-const utils = useUtils()
+const constants = useConstants();
+const utils = useUtils();
 
 /** @type {{value:Boolean}} */
-const isMobileLayout = inject("isMobileLayout")
+const isMobileLayout = inject("isMobileLayout");
 
 const props = defineProps({
     /** @type {Section} **/
     model: {
         type: Object,
-        required: true
+        required: true,
     },
 
     presentationMode: String,
-    active: Boolean
-})
+    active: Boolean,
+});
 
 const visible = computed(() => {
-    if(!props.presentationMode || props.presentationMode === constants.PresentationModes.NONE)
-        return false
-    if(props.presentationMode === constants.PresentationModes.ALL_AT_ONCE)
-        return true
-    return props.active
-})
+    if (
+        !props.presentationMode ||
+        props.presentationMode === constants.PresentationModes.NONE
+    )
+        return false;
+    if (props.presentationMode === constants.PresentationModes.ALL_AT_ONCE)
+        return true;
+    return props.active;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -91,13 +99,25 @@ section.resume-section-with-divider {
 }
 
 div.resume-section-content {
-    @include generate-dynamic-styles-with-hash((
-        xxxl:   (padding: 4.5rem 4.5rem 4.5rem),
-        xxl:    (padding: 4rem 4rem 4.25rem),
-        lg:     (padding: 2rem 2rem 3rem),
-        md:     (padding: 1.5rem 1.5rem 2rem),
-        sm:     (padding: 1.5rem 1.2rem 2rem)
-    ));
+    @include generate-dynamic-styles-with-hash(
+        (
+            xxxl: (
+                padding: 4.5rem 4.5rem 4.5rem,
+            ),
+            xxl: (
+                padding: 4rem 4rem 4.25rem,
+            ),
+            lg: (
+                padding: 2rem 2rem 3rem,
+            ),
+            md: (
+                padding: 1.5rem 1.5rem 2rem,
+            ),
+            sm: (
+                padding: 1.5rem 1.2rem 2rem,
+            ),
+        )
+    );
 
     display: flex;
     flex-direction: column;

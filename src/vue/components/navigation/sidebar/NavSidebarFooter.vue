@@ -1,22 +1,22 @@
 <template>
     <div class="nav-sidebar-footer">
-        <div class="nav-sidebar-footer-language-picker-wrapper">
-            <LanguagePicker :shrink="shrink"/>
-        </div>
-        <div v-if="!shrink"
+        <!-- <div class="nav-sidebar-footer-language-picker-wrapper">
+             <LanguagePicker :shrink="shrink" />
+        </div> -->
+        <!-- <div v-if="!shrink"
              class="nav-sidebar-footer-credits">
             <span v-html="credits"/>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script setup>
-import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue"
+import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue";
 
 const props = defineProps({
     credits: String,
-    shrink: Boolean
-})
+    shrink: Boolean,
+});
 </script>
 
 <style lang="scss" scoped>

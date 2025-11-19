@@ -1,103 +1,131 @@
 <template>
-    <div class="portfolio-item"
-         :class="`portfolio-item-${transitionStatus}`"
-         @click="_onClick">
+    <div
+        class="portfolio-item"
+        :class="`portfolio-item-${transitionStatus}`"
+        @click="_onClick"
+    >
         <div class="portfolio-item-content-wrapper">
             <div class="portfolio-item-icon-wrapper">
-                <IconView class="portfolio-icon-view"
-                          ref="iconView"
-                          :img="item?.img"
-                          :fa-icon="item?.fallbackFaIcon"
-                          :background-color="item?.fallbackFaIconColor"
-                          :prioritize-image="true"
-                          :transparency="!item"/>
+                <IconView
+                    class=""
+                    ref="iconView"
+                    :img="item?.img"
+                    :fa-icon="item?.fallbackFaIcon"
+                    :background-color="item?.fallbackFaIconColor"
+                    :prioritize-image="true"
+                    :transparency="!item"
+                />
 
-                <div class="portfolio-item-thumb-overlay">
+                <!-- <div class="portfolio-item-thumb-overlay">
                     <div class="portfolio-item-thumb-overlay-content eq-h6">
-                        <i class="fas fa-eye fa-2x"/>
+                        <i class="fas fa-eye fa-2x" />
                     </div>
-                </div>
+                </div> -->
             </div>
 
-            <div class="portfolio-item-description-wrapper">
-                <button class="portfolio-item-title"
-                        v-html="localize(item.locales, 'title')"/>
+            <!-- <div class="portfolio-item-description-wrapper">
+                <button
+                    class="portfolio-item-title"
+                    v-html="localize(item.locales, 'title')"
+                />
 
-                <p class="portfolio-item-category"
-                   v-html="categoryName"/>
-            </div>
+                <p class="portfolio-item-category" v-html="categoryName" />
+            </div> -->
         </div>
     </div>
 </template>
 
 <script setup>
-import {inject, onMounted, onUnmounted, ref, watch} from "vue"
-import {useScheduler} from "/src/composables/scheduler.js"
-import {useUtils} from "/src/composables/utils.js"
-import IconView from "/src/vue/components/widgets/IconView.vue"
+import { inject, onMounted, onUnmounted, ref, watch } from "vue";
+import { useScheduler } from "/src/composables/scheduler.js";
+import { useUtils } from "/src/composables/utils.js";
+import IconView from "/src/vue/components/widgets/IconView.vue";
 
-const scheduler = useScheduler()
-const utils = useUtils()
+const scheduler = useScheduler();
+const utils = useUtils();
 
 const props = defineProps({
     /** @type {ArticleItem} **/
     item: {
         type: Object,
-        required: true
+        required: true,
     },
     categoryName: String,
     index: Number,
-    transitionCount: Number
-})
+    transitionCount: Number,
+});
 
 /** @type {Function} */
-const localize = inject("localize")
+const localize = inject("localize");
 
 /** @type {Function} */
-const showProjectModal = inject("showProjectModal")
+const showProjectModal = inject("showProjectModal");
 
-const transitionStatus = ref("hidden")
-const iconView = ref(null)
-const tag = utils.generateUniqueRandomString("portfolio-item")
+const transitionStatus = ref("hidden");
+const iconView = ref(null);
+const tag = utils.generateUniqueRandomString("portfolio-item");
 
-onMounted(() => { _showAfterLoading() })
-onUnmounted(() => { _hide() })
-watch(() => props.transitionCount, () => { _showAfterLoading() })
+onMounted(() => {
+    _showAfterLoading();
+});
+onUnmounted(() => {
+    _hide();
+});
+watch(
+    () => props.transitionCount,
+    () => {
+        _showAfterLoading();
+    },
+);
 
 const _hide = () => {
-    transitionStatus.value = "hidden"
-    scheduler.clearAllWithTag(tag)
-}
+    transitionStatus.value = "hidden";
+    scheduler.clearAllWithTag(tag);
+};
 
 const _showAfterLoading = () => {
-    _hide()
+    _hide();
 
-    scheduler.interval(() => {
-        const isLoading = iconView.value.imageView && iconView.value.imageView.isLoading()
-        const hasImage = props.item.img
-        if(!hasImage || !isLoading) {
-            _show()
-        }
-    }, 1000/30, tag)
-}
+    scheduler.interval(
+        () => {
+            const isLoading =
+                iconView.value.imageView &&
+                iconView.value.imageView.isLoading();
+            const hasImage = props.item.img;
+            if (!hasImage || !isLoading) {
+                _show();
+            }
+        },
+        1000 / 30,
+        tag,
+    );
+};
 
 const _show = () => {
-    scheduler.clearAllWithTag(tag)
+    scheduler.clearAllWithTag(tag);
 
-    const timeout = 30 + (props.index || 0) * 60
-    scheduler.schedule(() => {
-        transitionStatus.value = "showing"
-    }, timeout, tag)
+    const timeout = 30 + (props.index || 0) * 60;
+    scheduler.schedule(
+        () => {
+            transitionStatus.value = "showing";
+        },
+        timeout,
+        tag,
+    );
 
-    scheduler.schedule(() => {
-        transitionStatus.value = "shown"
-        scheduler.clearAllWithTag(tag)
-    }, timeout + 350, tag)
-}
+    scheduler.schedule(
+        () => {
+            transitionStatus.value = "shown";
+            scheduler.clearAllWithTag(tag);
+        },
+        timeout + 350,
+        tag,
+    );
+};
 
 const _onClick = () => {
-    showProjectModal(props.item)
-}
+    showProjectModal(props.item);
+};
 </script>
 
 <style lang="scss" scoped>
@@ -128,11 +156,11 @@ div.portfolio-item-showing {
 
 @keyframes appear {
     from {
-        opacity:0;
+        opacity: 0;
         transform: scale(0.8) translateY(30%);
     }
     to {
-        opacity:1
+        opacity: 1;
     }
 }
 
@@ -189,7 +217,7 @@ div.portfolio-item-content-wrapper {
 
     /** Icon View **/
     div.portfolio-icon-view {
-        font-size: calc(var(--base-icon-size)/2 * var(--proportion));
+        font-size: calc(var(--base-icon-size) / 2 * var(--proportion));
     }
 
     /** Overlay Feedback **/
@@ -229,8 +257,8 @@ div.portfolio-item-content-wrapper {
 
     p.portfolio-item-category {
         padding: 0;
-        color: $light-7!important;
-        font-size: calc(var(--base-title-size)*0.73 * var(--proportion));
+        color: $light-7 !important;
+        font-size: calc(var(--base-title-size) * 0.73 * var(--proportion));
         margin: 0;
         @include media-breakpoint-up(lg) {
             margin-top: 2px;
