@@ -15,7 +15,7 @@
           "id": 1,
           "locales": {
             "en": {
-              "description": "With over 8 years of professional experience in PHP development, I specialize in building scalable, secure, and high-performing web applications that deliver real business results. I work across both frontend and backend, primarily using PHP and JavaScript. Managing everything from backend APIs to responsive frontends — and can help turn your requirements into robust, maintainable code."
+              "description": "With over <strong>8  years</strong> of professional experience in PHP development, I specialize in building scalable, secure, and high-performing web applications that deliver real business results. I work across both frontend and backend, primarily using <strong> PHP and JavaScript</strong>. Managing everything from backend APIs to responsive frontends — and can help turn your requirements into robust, maintainable code."
             },
 
             "es": {
@@ -36,7 +36,7 @@
           "id": 2,
           "locales": {
             "en": {
-              "description": "I believe that good design should enhance people's lives, helping them navigate technology with ease and confidence. Let’s work together to bring ideas to life and build something truly amazing!"
+              "description": "Let’s work together to bring ideas to life and build something truly amazing!"
             },
 
             "es": {
