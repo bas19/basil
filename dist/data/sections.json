@@ -8,7 +8,7 @@
       "type": "centered",
       "locales": {
         "en": {
-          "title": "Welcome to *my resume!*",
+          "title": "Welcome!",
           "title_short": "Welcome!",
           "description": null,
           "nav_label": "About"
@@ -78,7 +78,7 @@
         "en": {
           "title": "*Skill* Set",
           "title_short": null,
-          "description": "Exploring the diverse range of skills I've acquired and developed:",
+          "description": "",
           "nav_label": "Skills"
         },
         "es": {
