@@ -311,7 +311,7 @@
           "locales": {
             "en": {
               "title": "English",
-              "description": "Native speaker with excellent communication and writing skills.",
+              "description": "Can communicate and write effectively.",
               "level": "Conversationally Fluent"
             },
             "es": {
@@ -342,7 +342,7 @@
           "locales": {
             "en": {
               "title": "Filipino",
-              "description": "Fluent in both spoken and written Filipino; confident in professional communication.",
+              "description": "Fluent in both spoken and written Filipino.",
               "level": "Native"
             }
           }
