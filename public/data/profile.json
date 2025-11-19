@@ -5,7 +5,7 @@
   "locales": {
     "en": {
       "credits": "Designed by <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-      "role": "Web Developer"
+      "role": "Web/Mobile App Developer"
     },
 
     "es": {
@@ -32,8 +32,8 @@
       "href": null,
       "locales": {
         "en": {
-          "value": "Cebu City, Philippines",
-          "valueShort": "Philippines, Cebu City"
+          "value": "Cebu, Philippines",
+          "valueShort": "Philippines, Cebu"
         },
         "es": {
           "valueShort": "California – EE.UU."
@@ -73,7 +73,7 @@
 
     {
       "id": "phone",
-      "value": "+1 +63 993 037 1628",
+      "value": "+63 993 037 1628",
       "valueShort": "+63 993 037 1628",
       "faIcon": "fa-brands fa-whatsapp",
       "href": "tel:+63 993 037 1628"
