@@ -47,7 +47,6 @@
           "fallbackFaIcon": "",
           "fallbackFaIconColor": null,
           "category": "productivity",
-          "description": "SMS Management Software",
           "locales": {
             "en": {
               "title": "BrainPulse",
@@ -71,7 +70,8 @@
             {
               "faIcon": "fa-brands fa-apple",
               "href": "internal software",
-              "stringKey": "internal"
+              "stringKey": "internal",
+              "description": "SMS Management Software"
             }
           ]
         },
@@ -104,7 +104,9 @@
             {
               "faIcon": "fa-brands fa-apple",
               "href": "",
-              "stringKey": "internal"
+              "stringKey": "mobile",
+              "description": "Job Application",
+              "name": "Hire Trades"
             }
           ]
         },
@@ -137,7 +139,8 @@
             {
               "faIcon": "fa-brands fa-apple",
               "href": "https://othership.com",
-              "stringKey": "view_on_app_store"
+              "stringKey": "view_on_app_store",
+              "description": "Office Space Booking"
             }
           ]
         },
@@ -170,7 +173,8 @@
             {
               "faIcon": "fa-brands fa-apple",
               "href": "https://www.ethesia.com",
-              "stringKey": "view_on_app_store"
+              "stringKey": "view_on_app_store",
+              "description": "Medical Job Site"
             }
           ]
         },
@@ -204,7 +208,8 @@
             {
               "faIcon": "fa-brands fa-apple",
               "href": "https://www.pacificresort.com",
-              "stringKey": "view_on_app_store"
+              "stringKey": "view_on_app_store",
+              "description": "Resort Hotel Accomodation"
             }
           ]
         },
@@ -238,7 +243,8 @@
             {
               "faIcon": "fa-brands fa-apple",
               "href": "https://www.7dfoods.com",
-              "stringKey": "view_on_app_store"
+              "stringKey": "view_on_app_store",
+              "description": "Company Products"
             }
           ]
         }
