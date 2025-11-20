@@ -1,4 +1,2 @@
 ## Deployment
-rm -rf dist
-npm run build
-npm run deploy
+- npm run build && npm run deploy
