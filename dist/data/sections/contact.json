@@ -40,8 +40,8 @@
       "component": "ArticleContactOptions",
       "locales": {
         "en": {
-          "title": "Or...",
-          "description": "If you prefer, you can reach out to me through the following options:"
+          "title": "",
+          "description": ""
         },
         "es": {
           "title": "O...",

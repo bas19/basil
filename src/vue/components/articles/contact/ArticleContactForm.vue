@@ -4,15 +4,15 @@
         <form id="contact-form"
               ref="form"
               @submit="_onFormSubmit">
-            <ArticleContactFormFields v-if="shouldDisplayFormFields"
+            <!-- <ArticleContactFormFields v-if="shouldDisplayFormFields"
                                       :error-message="errorMessage"
-                                      @input="_onInput"/>
+                                      @input="_onInput"/> -->
 
-            <ArticleContactFormThankYou v-else
+            <!-- <ArticleContactFormThankYou v-else
                                         :title="localize(model.locales, 'contact_thank_you')"
                                         :description="localize(model.locales, 'contact_thank_you_description')"
                                         :info="localize(model.locales, 'contact_thank_you_reply').replaceAll('{email}', email || '')"
-                                        @reset="_onFormReset"/>
+                                        @reset="_onFormReset"/> -->
         </form>
     </Article>
 </template>
