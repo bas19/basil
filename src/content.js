@@ -51,6 +51,14 @@ export const services = [
 
 export const projects = [
     {
+        name: "Vinocrat",
+        description:
+            "Website for Professor Reinders Wine Academy at The Northern Club, Auckland — WSET wine courses, instructor profile, curriculum, and enrollment enquiries.",
+        stack: ["Website", "Education", "Landing Page"],
+        image: "projects/vinocrat.webp",
+        livePreview: "https://vinocrat.wine",
+    },
+    {
         name: "Othership",
         description:
             "Workspace discovery and booking platform with location search, filtering, instant booking, and an interactive map of listings across the UK.",
